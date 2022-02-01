@@ -1,0 +1,412 @@
+.loginpage {
+  display: flex;
+  flex-flow: column;
+  background: $black;
+  @media screen and #{$lg} {
+    display: block;
+  }
+}
+.sliderwpr {
+  order: 2;
+  background: $black;
+  @media screen and #{$lg} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  > .label {
+    display: block;
+    @media screen and #{$lg} {
+      display: none;
+    }
+    p {
+      color: $white;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 40px 20px 0 20px;
+    }
+  }
+  .thumbnail {
+    position: relative;
+    padding: 20px;
+
+    @media screen and #{$lg} {
+      padding: 0;
+    }
+    .imgwpr {
+      position: relative;
+      margin: 0;
+      @media screen and #{$lg} {
+        position: static;
+      }
+      img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px;
+        @media screen and #{$lg} {
+          border-radius: 0;
+          height: 100vh;
+          width: 100vw !important;
+        }
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.7);
+        @media screen and #{$lg} {
+          height: 100vh;
+        }
+      }
+    }
+  }
+  .txtwpr {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    z-index: 2;
+    @media screen and #{$lg} {
+      top: 50vh;
+      width: 100%;
+    }
+    p {
+      color: $white;
+    }
+    .datawpr {
+      flex-flow: column nowrap;
+      padding: 20px 0;
+      @media screen and #{$lg} {
+        padding: 20px 0;
+        width: 50%;
+        flex-flow: row wrap;
+      }
+      li {
+        margin: 5px 0;
+        @media screen and #{$lg} {
+          width: 50%;
+          margin: 10px 0;
+        }
+        p {
+          font-size: 14px;
+          line-height: 18px;
+          @media screen and #{$lg} {
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+    .title {
+      p {
+        font-size: 30px;
+        line-height: 38px;
+
+        @media screen and #{$lg} {
+          font-size: 60px;
+          line-height: 88px;
+        }
+      }
+    }
+    .timeposted {
+      color: $white;
+      padding: 10px 15px;
+      background: rgba(256, 256, 256, 0.4);
+      border-radius: 100px;
+      display: inline;
+      font-size: 12px;
+      font-weight: 600;
+      svg {
+        margin: 0 6px -4px 0;
+      }
+    }
+  }
+}
+.loginmain {
+  order: 1;
+  margin: 0 auto;
+  align-items: center;
+  background: $black;
+  @media screen and #{$lg} {
+    height: 100vh;
+    background: transparent;
+  }
+  > .flex {
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .govtlogo {
+    align-items: center;
+    margin: 20px 0 0 0;
+    @media screen and #{$lg} {
+      margin: 0;
+    }
+    img {
+      width: 60px;
+      padding: 0 10px 0 0;
+    }
+    .logowpr {
+      margin: 0;
+      color: $white;
+      .org {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+        @media screen and #{$lg} {
+          font-size: 24px;
+        }
+      }
+      .depart {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0;
+      }
+      .govt {
+        font-size: 12px;
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+  }
+}
+.loginmodule {
+  background: $white;
+  border-radius: 10px;
+  padding: 60px 20px;
+  margin: 30px 0 0 0;
+  @media screen and #{$lg} {
+    width: 25%;
+    padding: 80px 50px 20px 50px;
+    margin: 0;
+  }
+  .title {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600;
+    letter-spacing: 5.6px;
+    text-align: center;
+    @media screen and #{$lg} {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+  .desc {
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 1;
+    margin: 12px 0 10px 0;
+    @media screen and #{$lg} {
+      opacity: 0.8;
+      margin: 12px 0 30px 0;
+    }
+  }
+  .formwpr {
+    .inputwpr {
+      label {
+        letter-spacing: 1.68px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 600;
+        margin: 35px 0 8px 0;
+
+        @media screen and #{$lg} {
+          margin: 35px 0 12px 0;
+        }
+      }
+      input {
+        padding: 18px 30px;
+        border-radius: 50px;
+        border: 1px solid #444bd533;
+        background: #444bd50f;
+        letter-spacing: 1.68px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 600;
+        font-family: $fontfamily;
+        box-shadow: 0px 10px 20px #444bd545;
+
+        @media screen and #{$lg} {
+          padding: 22px 30px;
+        }
+      }
+    }
+    .bottomwpr {
+      a {
+        letter-spacing: 1.44px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 600;
+        color: $black;
+        opacity: 0.6;
+        margin: 60px 0 12px 0;
+        display: block;
+        text-decoration: none;
+      }
+      .tc {
+        margin: 10px 0;
+        text-align: center;
+        letter-spacing: normal;
+
+        @media screen and #{$lg} {
+          margin: 80px 0 10px 0;
+        }
+      }
+    }
+  }
+}
+.newswpr {
+  order: 3;
+  background: $black;
+  .newsbtnwpr {
+    display: none;
+    @media screen and #{$lg} {
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      z-index: 0;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+  .wpr {
+    @media screen and #{$lg} {
+      transform: translate(0, 110vh);
+      transition: all 0.2s ease-in-out;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+    }
+  }
+  &.isopen {
+    .wpr {
+      transform: translate(0, 0vh);
+    }
+    .overlay {
+      opacity: 1;
+    }
+  }
+  .modalwpr {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    .label {
+      display: block;
+      @media screen and #{$lg} {
+        display: none;
+      }
+      p {
+        color: $white;
+        font-weight: 800;
+        font-size: 14px;
+        padding: 20px 20px 0 20px;
+      }
+    }
+  }
+  .btnwpr {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    button {
+      padding: 14px 50px;
+      border: 2px solid $white;
+      background: transparent;
+      color: $white;
+      border-radius: 100px;
+      cursor: pointer;
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4 s ease-in-out 0.4s;
+  }
+  .closebtn {
+    display: none;
+    @media screen and #{$lg} {
+      display: flex;
+      justify-content: center;
+    }
+    .svgwpr {
+      margin: 5px 0 0 0;
+    }
+    .closebtnwpr {
+      font-size: 20px;
+      color: $white;
+      text-align: center;
+      border: 1px solid $white;
+      border-radius: 100%;
+      background: transparent;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  .thumbnailwpr {
+    gap: 30px;
+    padding: 20px 30px 30px 30px;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    width: calc(100vw - 60px);
+    scrollbar-width: none;
+
+    @media screen and #{$lg} {
+      padding: 30px;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .thumbnail {
+      background: $white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 15%;
+      min-width: 250px;
+      min-height: 350px;
+      box-shadow: 0 0 20px 10px rgb(0 0 0 / 10%);
+    }
+    .title {
+      color: $blue;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 18px;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -25px;
+        background: $blue;
+        border-radius: 100px;
+      }
+    }
+    .desc {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
